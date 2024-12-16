@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productivity Tracker App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="font-family-base p-sm">
+    <!-- Code goes here -->
+    <div class="container-fluid p-3">
+      <h1 class="text-center mb-5">Productivity Tracker App</h1>
+      <div class="container__nrp text-center mb-4">
+        <h4 class="mb-2"><b>Nama: Justin Chow</b></h4>
+        <h4><b>NRP: 5025231087</b></h4>
+      </div>
+
+      <!-- Current Activity Section -->
+      <div class="container__current_activity mb-5">
+        <div
+          class="container__current_activity_title d-flex justify-content-between align-items-center mb-3"
+        >
+          <div class="container_header_current_activity">
+            <h2>Current Activity</h2>
+            <p>List of activities that's on progress</p>
+          </div>
+          <div class="container_current_activity_buttons">
+            <button class="btn btn-primary" id="addActivity">
+              Add Activity
+            </button>
+          </div>
+        </div>
+
+        <ul
+          class="list-unstyled row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"
+        >
+          <li class="col">
+            <div
+              class="activity-info card p-3 shadow-sm text-center"
+              data-activity="1"
+            >
+              <h5 class="card-title">Activity 1</h5>
+              <p id="currentTime-1" class="card-text mt-3"><b>00:00.00</b></p>
+              <div class="buttons d-flex justify-content-center mt-3 gap-2">
+                <button class="btn btn-danger stop" data-activity="1">
+                  Stop
+                </button>
+                <button class="btn btn-success start" data-activity="1">
+                  Start
+                </button>
+              </div>
+              <p class="target-time mt-4 mb-0">Target time: 01:10.34</p>
+            </div>
+          </li>
+          <li class="col">
+            <div
+              class="activity-info card p-3 shadow-sm text-center"
+              data-activity="2"
+            >
+              <h5 class="card-title">Activity 2</h5>
+              <p id="currentTime-2" class="card-text mt-3"><b>00:00.00</b></p>
+              <div class="buttons d-flex justify-content-center mt-3 gap-2">
+                <button class="btn btn-danger stop" data-activity="2">
+                  Stop
+                </button>
+                <button class="btn btn-success start" data-activity="2">
+                  Start
+                </button>
+              </div>
+              <p class="target-time mt-4 mb-0">Target time: 05:00.27</p>
+            </div>
+          </li>
+          <li class="col">
+            <div
+              class="activity-info card p-3 shadow-sm text-center"
+              data-activity="3"
+            >
+              <h5 class="card-title">Activity 3</h5>
+              <p id="currentTime-3" class="card-text mt-3"><b>00:00.00</b></p>
+              <div class="buttons d-flex justify-content-center mt-3 gap-2">
+                <button class="btn btn-danger stop" data-activity="3">
+                  Stop
+                </button>
+                <button class="btn btn-success start" data-activity="3">
+                  Start
+                </button>
+              </div>
+              <p class="target-time mt-4 mb-0">Target time: 13:50.34</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Past Activity Section -->
+      <div class="container__past_activity">
+        <div class="container_header_past_activity mb-3">
+          <h2>Past Activity</h2>
+          <p>List of activities that have been done</p>
+        </div>
+        <table border="1" id="activityTable" class="text-center">
+          <thead>
+            <tr class="text-white">
+              <th data-sort="activity" class="border border-light p-2">
+                Activity
+              </th>
+              <th data-sort="target" class="border border-light p-2">Target</th>
+              <th data-sort="time" class="border border-light p-2">
+                Time Tracked
+              </th>
+              <th data-sort="performance" class="border border-light p-2">
+                Performance
+              </th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
